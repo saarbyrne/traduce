@@ -1,0 +1,37 @@
+/* Same token names as Verbos and Charla. Traduce's accent is blue. */
+:root, :host {
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --surface-2: #eceef2;
+  --text: #1a1c20;
+  --muted: #666a73;
+  --line: #dfe2e8;
+  --accent: #2a5bb8;
+  --accent-text: #ffffff;
+  --accent-weak: #e3ebf8;
+  --ok: #1f7a4d;
+  --bad: #b42318;
+  --radius: 12px;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.04), 0 1px 1px rgb(0 0 0 / 0.03);
+  --lift: 0 8px 28px rgb(20 24 32 / 0.16), 0 1px 3px rgb(20 24 32 / 0.08);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root, :host {
+    --bg: #131518;
+    --surface: #1c1f24;
+    --surface-2: #262a30;
+    --text: #e9ebef;
+    --muted: #9ca1ab;
+    --line: #31353d;
+    --accent: #7ea8f5;
+    --accent-text: #0a1a33;
+    --accent-weak: #1a2740;
+    --ok: #5ccf96;
+    --bad: #f97a70;
+    --shadow: none;
+    --lift: 0 8px 28px rgb(0 0 0 / 0.5), 0 0 0 1px rgb(255 255 255 / 0.04);
+    color-scheme: dark;
+  }
+}

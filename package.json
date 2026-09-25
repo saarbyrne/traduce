@@ -1,21 +1,12 @@
 {
-  "name": "languagekeyboard",
+  "name": "traduce",
+  "version": "2.0.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "description": "Chrome extension that translates selected text between Spanish and English",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && cp manifest.json dist/ && cp -r public/* dist/ 2>/dev/null || true",
-    "preview": "vite preview"
+    "test": "node --test \"tests/*.test.js\"",
+    "zip": "node scripts/zip.mjs",
+    "typecheck": "tsc -p jsconfig.json"
   },
-  "devDependencies": {
-    "@preact/preset-vite": "^2.8.1",
-    "@types/chrome": "^0.0.315",
-    "@types/node": "^22.14.1",
-    "typescript": "~5.7.2",
-    "vite": "^6.3.1"
-  },
-  "dependencies": {
-    "preact": "^10.26.5"
-  }
+  "engines": { "node": ">=22" }
 }

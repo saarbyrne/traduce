@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Traduce</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="popup.css">
+  <script src="lang.js"></script>
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <span class="brand">Traduce</span>
+    <button type="button" id="dir" class="dir" aria-label="Cambiar idioma">ES → EN</button>
+  </header>
+  <main class="main">
+    <textarea id="input" class="input area" placeholder="Escribe o pega un texto" aria-label="Texto" autofocus spellcheck="false"></textarea>
+    <div id="output" class="out" aria-live="polite" hidden></div>
+    <div class="actions">
+      <button type="button" id="copy" class="btn" disabled>Copiar</button>
+    </div>
+  </main>
+  <footer class="settings">
+    <label class="setting">
+      <span>Botón al seleccionar</span>
+      <input type="checkbox" id="showButton" class="switch" checked>
+    </label>
+    <div class="setting" id="shortcutRow" hidden>
+      <span>Atajo</span>
+      <button type="button" id="shortcut" class="kbd"></button>
+    </div>
+  </footer>
+</body>
+</html>
