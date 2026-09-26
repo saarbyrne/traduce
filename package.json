@@ -1,6 +1,6 @@
 {
   "name": "traduce",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "description": "Chrome extension that translates selected text between Spanish and English",
   "scripts": {

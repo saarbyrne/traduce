@@ -327,39 +327,39 @@
   // Tokens match src/tokens.css (checked by tests/tokens.test.js).
   const CSS = `
 :host {
-  --bg: #f4f5f7; --surface: #ffffff; --surface-2: #eceef2; --text: #1a1c20; --muted: #666a73;
-  --line: #dfe2e8; --accent: #2a5bb8; --accent-text: #ffffff; --accent-weak: #e3ebf8;
-  --ok: #1f7a4d; --bad: #b42318; --radius: 12px;
-  --lift: 0 8px 28px rgb(20 24 32 / 0.16), 0 1px 3px rgb(20 24 32 / 0.08);
+  --bg: #ffffff; --surface: #ffffff; --surface-2: #f2f2ef; --text: #141414; --muted: #6e6e6e;
+  --line: #e3e3de; --accent: #ffd60a; --accent-text: #141414; --accent-weak: #fff3b0;
+  --ok: #1f7a4d; --bad: #b42318; --radius: 0;
+  --lift: 0 0 0 2px #141414;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :host {
-    --bg: #131518; --surface: #1c1f24; --surface-2: #262a30; --text: #e9ebef; --muted: #9ca1ab;
-    --line: #31353d; --accent: #7ea8f5; --accent-text: #0a1a33; --accent-weak: #1a2740;
+    --bg: #141414; --surface: #1c1c1c; --surface-2: #262626; --text: #ffffff; --muted: #a3a3a3;
+    --line: #333333; --accent: #ffd60a; --accent-text: #141414; --accent-weak: #3a3310;
     --ok: #5ccf96; --bad: #f97a70;
-    --lift: 0 8px 28px rgb(0 0 0 / 0.5), 0 0 0 1px rgb(255 255 255 / 0.04);
+    --lift: 0 0 0 2px #ffffff;
     color-scheme: dark;
   }
 }
 * { box-sizing: border-box; }
 button { font: inherit; color: inherit; margin: 0; cursor: pointer; -webkit-tap-highlight-color: transparent; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
 [hidden] { display: none !important; }
 
 .fab {
   position: fixed; top: 0; left: 0;
   display: grid; place-items: center;
-  width: 32px; height: 32px; padding: 0; border: 0; border-radius: 999px;
+  width: 32px; height: 32px; padding: 0; border: 0; border-radius: 0;
   background: var(--accent); color: var(--accent-text); box-shadow: var(--lift);
   animation: in 120ms ease-out;
 }
-.fab:hover { filter: brightness(1.08); }
+.fab:hover { filter: brightness(0.95); }
 .fab .key:empty { display: none; }
 .fab.pill {
   display: inline-flex; align-items: center; gap: 6px;
   width: auto; padding: 0 11px 0 8px;
-  font: 600 12px/1 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; letter-spacing: 0.02em;
+  font: 600 12px/1 "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; letter-spacing: 0.02em;
 }
 
 .panel {
@@ -369,20 +369,20 @@ button { font: inherit; color: inherit; margin: 0; cursor: pointer; -webkit-tap-
   padding: 12px 14px 14px;
   background: var(--surface); color: var(--text);
   border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--lift);
-  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font: 15px/1.5 "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   animation: in 120ms ease-out;
 }
 .head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
 .dir {
-  min-height: 28px; padding: 0 10px; border: 0; border-radius: 999px;
-  background: var(--accent-weak); color: var(--accent);
+  min-height: 28px; padding: 0 10px; border: 0; border-radius: 0;
+  background: var(--accent); color: var(--accent-text);
   font-size: 12px; font-weight: 650; letter-spacing: 0.04em; font-variant-numeric: tabular-nums;
 }
 .dir:hover { filter: brightness(0.97); }
 .close {
   display: grid; place-items: center; width: 28px; height: 28px; margin-right: -6px; padding: 0;
-  border: 0; border-radius: 8px; background: transparent; color: var(--muted);
+  border: 0; border-radius: 0; background: transparent; color: var(--muted);
 }
 .close:hover { background: var(--surface-2); color: var(--text); }
 .out {
@@ -394,14 +394,14 @@ button { font: inherit; color: inherit; margin: 0; cursor: pointer; -webkit-tap-
 .actions { display: flex; gap: 8px; margin-top: 12px; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
-  min-height: 36px; padding: 0 14px; border-radius: 10px;
+  min-height: 36px; padding: 0 14px; border-radius: 0;
   border: 1px solid var(--line); background: var(--surface);
   font-size: 14px; font-weight: 550;
 }
 .btn:hover { background: var(--surface-2); }
 .btn:disabled { opacity: 0.5; cursor: default; }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
-.btn.primary:hover { filter: brightness(1.05); background: var(--accent); }
+.btn.primary:hover { filter: brightness(0.95); background: var(--accent); }
 
 @media (pointer: coarse) {
   .fab { width: 40px; height: 40px; }
